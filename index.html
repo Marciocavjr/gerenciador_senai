@@ -9,16 +9,17 @@
 <body>
 <h1>Gerenciador de tarefas</h1>  
 
-<form>
-    <input type="text" placeholder="Digite uma tarefa" required>
-    <input type="text" placeholder="Descrição da tarefa">
-    <button>Enviar</button>
+<form id="task-form">
+    <input id="title" type="text" placeholder="Digite uma tarefa" required>
+    <input id="description" type="text" placeholder="Descrição da tarefa">
+
+    <button type="submit">Enviar</button>
 </form>
 
-<ul>
+<ul id="task-list">
     
 </ul>
 
-
+<script src="script.js"></script>
 </body>
 </html>
