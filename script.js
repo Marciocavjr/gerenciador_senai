@@ -64,6 +64,19 @@ async function toggleCompleted(id, completed){
         });
         loadTasks();
     }catch(error){
-
+        alert("Erro ao atualizar tarefa: " + erro.message);
     }
 }
+
+async function deleteTask(id){
+    try {
+        await fetch(`${apiUrl}/${id}`, {
+            method:'DELETE'
+        });
+        loadTasks();
+    } catch (error) {
+        alert("Erro ao excliuir tarefa: " + error.message);
+    }
+}
+
+loadTasks();
